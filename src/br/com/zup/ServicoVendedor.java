@@ -17,4 +17,14 @@ public class ServicoVendedor {
     public static void listarVendedores(){
         System.out.println(vendedores.toString());
     }
+
+    //Método para pesquisar Vendedor
+    public static Vendedor pesquisarVendedorPorCpf(String cpf) throws Exception{
+        for (Vendedor referencia: vendedores) {
+            if (referencia.getCpf().equals(cpf)){
+                return referencia;
+            }
+        }
+        throw new Exception("Este Vendedor não está cadastrado.");
+    }
 }
