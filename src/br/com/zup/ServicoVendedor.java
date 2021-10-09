@@ -13,6 +13,8 @@ public class ServicoVendedor {
         }
     }
 
+
+
     //Método cadastrar Vendedor
     public static Vendedor cadastrarVendedorResponsavel(String nome, String cpf, String email) throws Exception{
         validarEmail(email);

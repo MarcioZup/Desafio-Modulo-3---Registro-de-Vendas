@@ -14,9 +14,19 @@ public class ServicoCliente {
         }
     }
 
+    //Método para verificar se o CPF já está entre os cadastrados existentes
+    public static void verificarCpfExistentes(String cpf) throws Exception{
+        for (Cliente referencia : clientes) {
+            if (referencia.getCpf().equals(cpf)){
+                throw new Exception("Este CPF já consta no cadastro.");
+            }
+        }
+    }
+
     //Método cadastrar Cliente
     public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception{
         validarEmail(email);
+        verificarCpfExistentes(cpf);
         Cliente cliente = new Cliente(nome, cpf, email);
         clientes.add(cliente);
         return cliente;
