@@ -52,7 +52,6 @@ public class Sistema {
         String cpfVendedor = entradaDeDados("Digite o CPF do Vendedor Responsável por essa Venda: ").nextLine();
         double valorASerPago = entradaDeDados("Digite o valor a ser pago por essa Venda: R$ ").nextDouble();
         String dataDeRegistro = entradaDeDados("Digite a data de Registro da Venda: ").nextLine();
-        System.out.println("Venda cadastrada com Sucesso!");
         return ServicoVenda.cadastrarVenda(cpf, cpfVendedor, valorASerPago, dataDeRegistro);
     }
 
@@ -74,6 +73,12 @@ public class Sistema {
                 menu();
             }else if (opcao == 4){
                 ServicoVendedor.listarVendedores();
+                menu();
+            }else if (opcao == 5){
+                cadastrarVenda();
+                menu();
+            }else if (opcao == 6){
+                ServicoVenda.listarVendas();
                 menu();
             }
         }

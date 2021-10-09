@@ -26,7 +26,7 @@ public class ServicoCliente {
                 return referencia;
             }
         }
-        throw new Exception("Este Cliente não está cadastrado.");
+        throw new Exception("Este Cliente não está cadastrado. Venda NÃO concluída. Cadastre o cliente para prosseguir.");
     }
 
 

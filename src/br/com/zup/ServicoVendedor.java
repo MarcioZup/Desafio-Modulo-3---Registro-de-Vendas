@@ -25,6 +25,6 @@ public class ServicoVendedor {
                 return referencia;
             }
         }
-        throw new Exception("Este Vendedor não está cadastrado.");
+        throw new Exception("Este Vendedor não está cadastrado. Venda NÃo concluída. Cadastre o Vendedor para prosseguir");
     }
 }
