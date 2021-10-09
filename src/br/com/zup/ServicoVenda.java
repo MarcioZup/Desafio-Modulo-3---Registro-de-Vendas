@@ -21,4 +21,15 @@ public class ServicoVenda {
     public static void listarVendas(){
         System.out.println(vendas.toString());
     }
+
+    //Método para pesquisar Vendas de um cliente específico através do CPF
+    public static List<Venda> pesquisarVendaPeloCpfCliente(String cpf){
+        List<Venda> vendasDoCliente = new ArrayList<>();
+        for (Venda referencia: vendas) {
+            if (referencia.getCliente().getCpf().equals(cpf)){
+                vendasDoCliente.add(referencia);
+            }
+        }
+        return vendasDoCliente;
+    }
 }

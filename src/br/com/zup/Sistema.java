@@ -56,6 +56,14 @@ public class Sistema {
         return ServicoVenda.cadastrarVenda(cpf, cpfVendedor, valorASerPago, dataDeRegistro);
     }
 
+    //Método que lista as compras de um Cliente específico por CPF
+    public static List<Venda> pesquisarVendaPeloCpfCliente() throws Exception{
+        String cpf = entradaDeDados("Digite o CPF do consumidor que deseja listar todas as compras: ").nextLine();
+        ServicoCliente.verificarCpfExistentes(cpf);
+        List<Venda> vendas = ServicoVenda.pesquisarVendaPeloCpfCliente(cpf);
+        return vendas;
+    }
+
 
     //Método que executa o sistema
     public static boolean executar() throws Exception {
