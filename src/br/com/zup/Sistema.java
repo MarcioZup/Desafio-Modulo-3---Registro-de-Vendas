@@ -59,7 +59,7 @@ public class Sistema {
     //Método que lista as compras de um Cliente específico por CPF
     public static List<Venda> pesquisarVendaPeloCpfCliente() throws Exception{
         String cpf = entradaDeDados("Digite o CPF do consumidor que deseja listar todas as compras: ").nextLine();
-        ServicoCliente.verificarCpfExistentes(cpf);
+        ServicoCliente.pesquisarClientePorCpf(cpf);
         List<Venda> vendas = ServicoVenda.pesquisarVendaPeloCpfCliente(cpf);
         return vendas;
     }
@@ -89,6 +89,9 @@ public class Sistema {
             }else if (opcao == 6){
                 ServicoVenda.listarVendas();
                 menu();
+            }else if (opcao == 7) {
+                List<Venda> vendas = pesquisarVendaPeloCpfCliente();
+                System.out.println(vendas);
             }else if (opcao == 9){
                 System.out.println("Obrigado e Volte sempre. Você saiu do Sistema");
                 loop = false;
