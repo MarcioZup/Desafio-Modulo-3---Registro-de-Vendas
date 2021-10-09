@@ -7,4 +7,12 @@ public class Cliente extends Pessoa{
         super(nome, cpf, email);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\nNome: " + getNome());
+        retorno.append("\nCPF: " + getCpf());
+        retorno.append("\nE-mail: " + getEmail());
+        return retorno.toString();
+    }
 }
