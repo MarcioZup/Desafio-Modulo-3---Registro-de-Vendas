@@ -13,11 +13,18 @@ public class ServicoVendedor {
         }
     }
 
-
+    public static void verificarCpfExistentes(String cpf) throws Exception{
+        for (Vendedor referencia : vendedores) {
+            if (referencia.getCpf().equals(cpf)){
+                throw new Exception("Este CPF já consta no cadastro de Vendedores.");
+            }
+        }
+    }
 
     //Método cadastrar Vendedor
     public static Vendedor cadastrarVendedorResponsavel(String nome, String cpf, String email) throws Exception{
         validarEmail(email);
+        verificarCpfExistentes(cpf);
         Vendedor vendedorResponsavel = new Vendedor(nome, cpf, email);
         vendedores.add(vendedorResponsavel);
         return vendedorResponsavel;
