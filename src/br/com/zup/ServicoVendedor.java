@@ -21,9 +21,19 @@ public class ServicoVendedor {
         }
     }
 
+    //Método para verificar se o E-mail do Vendedor já está no cadastro
+    public static void verificarEmailExistente(String email) throws Exception{
+        for (Vendedor referencia : vendedores) {
+            if (referencia.getEmail().equals(email)){
+                throw new Exception("Este E-mail já consta no cadastro de Vendedores!");
+            }
+        }
+    }
+
     //Método cadastrar Vendedor
     public static Vendedor cadastrarVendedorResponsavel(String nome, String cpf, String email) throws Exception{
         validarEmail(email);
+        verificarEmailExistente(email);
         verificarCpfExistentes(cpf);
         Vendedor vendedorResponsavel = new Vendedor(nome, cpf, email);
         vendedores.add(vendedorResponsavel);
