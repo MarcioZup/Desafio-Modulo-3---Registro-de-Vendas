@@ -46,6 +46,16 @@ public class Sistema {
         return ServicoVendedor.cadastrarVendedorResponsavel(nome, cpf, email);
     }
 
+    //Método Cadastrar Vendas
+    public static Venda cadastrarVenda() throws Exception{
+        entradaDeDados("Digite o nome do Cliente dessa Venda: ").nextLine();
+        entradaDeDados("Digite o nome do Vendedor Responsável por essa Venda: ").nextLine();
+        String valorASerPago = entradaDeDados("Digite o valor a ser pago por essa Venda: ").nextLine();
+        String dataDeRegistro = entradaDeDados("Digite a data de Registro da Venda: ").nextLine();
+        System.out.println("Venda cadastrada com Sucesso!");
+        return ServicoVenda.cadastrarVenda(Cliente cliente, Vendedor vendedor, valorASerPago, dataDeRegistro);
+    }
+
 
     //Método que executa o sistema
     public static boolean executar() throws Exception {

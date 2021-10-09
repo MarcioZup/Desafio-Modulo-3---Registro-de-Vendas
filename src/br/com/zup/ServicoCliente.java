@@ -19,6 +19,17 @@ public class ServicoCliente {
         System.out.println(clientes.toString());
     }
 
+    //Método para pesquisar Cliente
+    public static Cliente pesquisarClientePorCpf(String cpf) throws Exception{
+        for (Cliente referencia: clientes) {
+            if (referencia.getCpf().equals(cpf)){
+                return referencia;
+            }
+        }
+        throw new Exception("Este Cliente não está cadastrado.");
+    }
+
+
 
 
 }
