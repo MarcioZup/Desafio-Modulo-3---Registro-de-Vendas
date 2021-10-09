@@ -48,12 +48,12 @@ public class Sistema {
 
     //Método Cadastrar Vendas
     public static Venda cadastrarVenda() throws Exception{
-        entradaDeDados("Digite o nome do Cliente dessa Venda: ").nextLine();
-        entradaDeDados("Digite o nome do Vendedor Responsável por essa Venda: ").nextLine();
-        String valorASerPago = entradaDeDados("Digite o valor a ser pago por essa Venda: ").nextLine();
+        String cpf = entradaDeDados("Digite o CPF do Cliente dessa Venda: ").nextLine();
+        String cpfVendedor = entradaDeDados("Digite o CPF do Vendedor Responsável por essa Venda: ").nextLine();
+        double valorASerPago = entradaDeDados("Digite o valor a ser pago por essa Venda: R$ ").nextDouble();
         String dataDeRegistro = entradaDeDados("Digite a data de Registro da Venda: ").nextLine();
         System.out.println("Venda cadastrada com Sucesso!");
-        return ServicoVenda.cadastrarVenda(Cliente cliente, Vendedor vendedor, valorASerPago, dataDeRegistro);
+        return ServicoVenda.cadastrarVenda(cpf, cpfVendedor, valorASerPago, dataDeRegistro);
     }
 
 

@@ -9,8 +9,10 @@ public class ServicoVenda {
 
 
     //Método cadastrar Venda
-    public static Venda cadastrarVenda(Cliente cliente, Vendedor vendedor, double valorASerPago, String dataDeRegistro) throws Exception{
-        Venda venda = new Venda();
+    public static Venda cadastrarVenda(String cpf, String cpfVendedor, double valorASerPago, String dataDeRegistro) throws Exception{
+        Cliente cliente = ServicoCliente.pesquisarClientePorCpf(cpf);
+        Vendedor vendedor = ServicoVendedor.pesquisarVendedorPorCpf(cpfVendedor);
+        Venda venda = new Venda(cliente, vendedor, valorASerPago, dataDeRegistro );
         vendas.add(venda);
         return venda;
     }
