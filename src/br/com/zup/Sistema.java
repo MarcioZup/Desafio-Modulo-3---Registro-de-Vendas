@@ -64,7 +64,7 @@ public class Sistema {
                 menu();
             }else if (opcao == 4){
                 ServicoVendedor.listarVendedores();
-
+                menu();
             }
         }
         return loop;
