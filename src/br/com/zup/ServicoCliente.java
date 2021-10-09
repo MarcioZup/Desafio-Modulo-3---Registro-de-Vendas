@@ -7,7 +7,7 @@ public class ServicoCliente {
 
     public static List<Cliente>clientes = new ArrayList<>();
 
-    //Método para validar sem E-mail tem @
+    //Método para validar se E-mail tem @
     public static void validarEmail(String email) throws Exception{
         if (!email.contains("@")){
             throw new Exception("Este E-mail está inválido.");
