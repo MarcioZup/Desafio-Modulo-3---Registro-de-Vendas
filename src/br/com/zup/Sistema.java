@@ -24,6 +24,7 @@ public class Sistema {
         System.out.println("4 - Consulta lista de Vendedores");
         System.out.println("5 - Cadastro de Vendas");
         System.out.println("6 - Consulta Vendas");
+        System.out.println("9 - Sair do Sistema");
 
     }
 
@@ -80,8 +81,13 @@ public class Sistema {
             }else if (opcao == 6){
                 ServicoVenda.listarVendas();
                 menu();
-            }
-        }
+            }else if (opcao == 9){
+                System.out.println("Obrigado e Volte sempre. Você saiu do Sistema");
+                loop = false;
+            }else{
+                System.out.println("Digite uma opção válida!");
+
+            }        }
         return loop;
     }
 
