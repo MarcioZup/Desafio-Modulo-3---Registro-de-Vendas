@@ -6,6 +6,7 @@ import java.util.List;
 public class ServicoCliente {
 
     public static List<Cliente>clientes = new ArrayList<>();
+    int tamanhoDaLista = clientes.size();
 
     //Método para validar se E-mail tem @
     public static void validarEmail(String email) throws Exception{
@@ -18,7 +19,7 @@ public class ServicoCliente {
     public static void verificarCpfExistentes(String cpf) throws Exception{
         for (Cliente referencia : clientes) {
             if (referencia.getCpf().equals(cpf)){
-                throw new Exception("Este CPF já consta no cadastro.");
+                throw new Exception("Este CPF já consta no cadastro. Operação NÃO realizada.");
             }
         }
     }
@@ -27,7 +28,7 @@ public class ServicoCliente {
     public static void verificarEmailExistente(String email) throws Exception{
         for (Cliente referencia : clientes) {
             if (referencia.getEmail().equals(email)){
-                throw new Exception("Este E-mail já consta no cadastro!");
+                throw new Exception("Este E-mail já consta no cadastro! Operação NÃO realizada.");
             }
         }
     }

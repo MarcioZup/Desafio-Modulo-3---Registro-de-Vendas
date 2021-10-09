@@ -16,7 +16,7 @@ public class ServicoVendedor {
     public static void verificarCpfExistentes(String cpf) throws Exception{
         for (Vendedor referencia : vendedores) {
             if (referencia.getCpf().equals(cpf)){
-                throw new Exception("Este CPF já consta no cadastro de Vendedores.");
+                throw new Exception("Este CPF já consta no cadastro de Vendedores. Operação NÃO realizada.");
             }
         }
     }
@@ -25,7 +25,7 @@ public class ServicoVendedor {
     public static void verificarEmailExistente(String email) throws Exception{
         for (Vendedor referencia : vendedores) {
             if (referencia.getEmail().equals(email)){
-                throw new Exception("Este E-mail já consta no cadastro de Vendedores!");
+                throw new Exception("Este E-mail já consta no cadastro de Vendedores! Operação NÃO realizada");
             }
         }
     }

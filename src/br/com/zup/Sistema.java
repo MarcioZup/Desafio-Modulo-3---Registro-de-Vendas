@@ -35,7 +35,6 @@ public class Sistema {
         String nome = entradaDeDados("Digite o nome do Cliente: ").nextLine();
         String cpf = entradaDeDados("Digite o CPF do Cliente: ").nextLine();
         String email = entradaDeDados("Digite o E-mail do Cliente: ").nextLine();
-        System.out.println("Cliente cadastrado com Sucesso!");
         return ServicoCliente.cadastrarCliente(nome, cpf, email);
 
     }
@@ -45,7 +44,6 @@ public class Sistema {
         String nome = entradaDeDados("Digite o nome do Vendedor: ").nextLine();
         String cpf = entradaDeDados("Digite o CPF do Vendedor: ").nextLine();
         String email = entradaDeDados("Digite o E-mail do Vendedor: ").nextLine();
-        System.out.println("Vendedor cadastrado com Sucesso!");
         return ServicoVendedor.cadastrarVendedorResponsavel(nome, cpf, email);
     }
 
