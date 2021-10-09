@@ -14,5 +14,10 @@ public class ServicoCliente {
         return cliente;
     }
 
+    public static void listarClientes(){
+        System.out.println(clientes.toString());
+    }
+
+
 
 }
