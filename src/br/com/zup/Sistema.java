@@ -24,6 +24,8 @@ public class Sistema {
         System.out.println("4 - Consulta lista de Vendedores");
         System.out.println("5 - Cadastro de Vendas");
         System.out.println("6 - Consulta Vendas");
+        System.out.println("7 - Consulta todas as Compras de um Cliente pelo CPF:");
+        System.out.println("8 - Consulta todas as Vendas de um Vendedor pelo E-mail:");
         System.out.println("9 - Sair do Sistema");
 
     }

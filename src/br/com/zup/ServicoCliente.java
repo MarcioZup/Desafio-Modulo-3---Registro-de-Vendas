@@ -7,8 +7,16 @@ public class ServicoCliente {
 
     public static List<Cliente>clientes = new ArrayList<>();
 
+    //Método para validar sem E-mail tem @
+    public static void validarEmail(String email) throws Exception{
+        if (!email.contains("@")){
+            throw new Exception("Este E-mail está inválido.");
+        }
+    }
+
     //Método cadastrar Cliente
     public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception{
+        validarEmail(email);
         Cliente cliente = new Cliente(nome, cpf, email);
         clientes.add(cliente);
         return cliente;
