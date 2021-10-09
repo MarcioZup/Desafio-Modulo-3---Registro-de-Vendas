@@ -23,9 +23,19 @@ public class ServicoCliente {
         }
     }
 
+    //Método para verificar se o E-mail do Cliente já está no cadastro
+    public static void verificarEmailExistente(String email) throws Exception{
+        for (Cliente referencia : clientes) {
+            if (referencia.getEmail().equals(email)){
+                throw new Exception("Este E-mail já consta no cadastro!");
+            }
+        }
+    }
+
     //Método cadastrar Cliente
     public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception{
         validarEmail(email);
+        verificarEmailExistente(email);
         verificarCpfExistentes(cpf);
         Cliente cliente = new Cliente(nome, cpf, email);
         clientes.add(cliente);
