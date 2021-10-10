@@ -73,7 +73,7 @@ public class Sistema {
     }
 
     //Método que lista as Vendas de um Vendedor específico por E-mail
-    public static List<Venda> pesquisarVendaPeloEmailDoVendedor() throws Exception{
+    public static List<Venda> pesquisarVendaPeloEmailDoVendedor() throws Exception {
         String email = entradaDeDados("Digite o E-mail do Vendedor responsável que deseja listar todas as Vendas: ").nextLine();
         ServicoVendedor.pesquisarVendedorPorEmail(email);
         List<Venda> vendas = ServicoVenda.pesquisarVendaPeloEmailDoVendedor(email);
@@ -109,11 +109,11 @@ public class Sistema {
                 List<Venda> vendas = pesquisarCompraPeloCpfCliente();
                 System.out.println(vendas);
                 menu();
-            }else if (opcao == 8) {
+            } else if (opcao == 8) {
                 List<Venda> vendas = pesquisarVendaPeloEmailDoVendedor();
                 System.out.println(vendas);
                 menu();
-            }else if (opcao == 9) {
+            } else if (opcao == 9) {
                 System.out.println("Obrigado e Volte sempre. Você saiu do Sistema");
                 loop = false;
             } else {

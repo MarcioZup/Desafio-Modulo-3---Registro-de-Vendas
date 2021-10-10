@@ -1,6 +1,6 @@
 package br.com.zup;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa {
 
     //Construtor
     public Cliente(String nome, String cpf, String email) {

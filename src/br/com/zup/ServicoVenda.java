@@ -19,9 +19,9 @@ public class ServicoVenda {
 
     //Método mostrar lista de Vendas
     public static void listarVendas() {
-        if (vendas.size() == 0){
+        if (vendas.size() == 0) {
             System.out.println("Não existem Vendas cadastradas");
-        }else {
+        } else {
             System.out.println(vendas.toString());
         }
     }
@@ -50,9 +50,9 @@ public class ServicoVenda {
                 vendasDoVendedor.add(referencia);
             }
         }
-        if (vendasDoVendedor.size() > 0){
+        if (vendasDoVendedor.size() > 0) {
             return vendasDoVendedor;
-        }else{
+        } else {
             System.out.println("Nenhuma Venda registrada para esse Vendedor");
         }
         return vendasDoVendedor;
