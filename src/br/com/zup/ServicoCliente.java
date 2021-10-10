@@ -45,7 +45,11 @@ public class ServicoCliente {
 
     //Método mostrar lista de Clientes
     public static void listarClientes(){
-        System.out.println(clientes.toString());
+        if (clientes.size() == 0){
+            System.out.println("Não existem Clientes cadastrados");
+        }else {
+            System.out.println(clientes.toString());
+        }
     }
 
     //Método para pesquisar Cliente
@@ -55,7 +59,7 @@ public class ServicoCliente {
                 return referencia;
             }
         }
-        throw new Exception("Este Cliente não está cadastrado. Venda NÃO concluída. Cadastre o cliente para prosseguir.");
+        throw new Exception("Este Cliente não está cadastrado.  Cadastre o cliente para prosseguir.");
     }
 
 

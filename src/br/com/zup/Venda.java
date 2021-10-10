@@ -59,10 +59,8 @@ public class Venda {
         retorno.append("\n--------------------");
         retorno.append("\n---Dados da Venda---");
         retorno.append("\n--------------------");
-        retorno.append("\nVendedor Responsável: " + vendedor);
-        retorno.append("\n--------------------");
-        retorno.append("\nCliente: " + cliente);
-        retorno.append("\n--------------------");
+        retorno.append("\nVendedor Responsável: \n" + vendedor);
+        retorno.append("\nCliente: \n" + cliente);
         retorno.append("\nValor a ser pago: R$ " + valorASerPago);
         retorno.append("\nData de registro: " + dataDeRegistro);
         return retorno.toString();

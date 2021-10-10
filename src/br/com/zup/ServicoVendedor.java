@@ -42,16 +42,31 @@ public class ServicoVendedor {
 
     //Método mostrar lista de Vendedores cadastrados
     public static void listarVendedores(){
-        System.out.println(vendedores.toString());
+        if (vendedores.size() == 0){
+            System.out.println("Não existem Vendedores cadastrados");
+        }else{
+            System.out.println(vendedores.toString());
+        }
+
     }
 
-    //Método para pesquisar Vendedor
+    //Método para pesquisar Vendedor por CPF
     public static Vendedor pesquisarVendedorPorCpf(String cpf) throws Exception{
         for (Vendedor referencia: vendedores) {
             if (referencia.getCpf().equals(cpf)){
                 return referencia;
             }
         }
-        throw new Exception("Este Vendedor não está cadastrado. Venda NÃo concluída. Cadastre o Vendedor para prosseguir");
+        throw new Exception("Este Vendedor não está cadastrado. Cadastre o Vendedor para prosseguir");
+    }
+
+    //Método para pesquisar Vendedor por E-mail
+    public static Vendedor pesquisarVendedorPorEmail(String email) throws Exception{
+        for (Vendedor referencia: vendedores) {
+            if (referencia.getEmail().equals(email)){
+                return referencia;
+            }
+        }
+        throw new Exception("Este Vendedor não está cadastrado. Cadastre o Vendedor para prosseguir");
     }
 }
